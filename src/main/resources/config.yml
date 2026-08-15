@@ -1,0 +1,6 @@
+# CrateSystem - Genel Ayarlar
+# Kasa tanimlari icin plugins/CrateSystem/crates/ klasorune bakiniz.
+# Her kasa kendi .yml dosyasinda tanimlanir, ornek: crates/example.yml
+
+settings:
+  debug: false

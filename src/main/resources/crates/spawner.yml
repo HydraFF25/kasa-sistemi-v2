@@ -1,0 +1,75 @@
+# ============================
+#  SPAWNER KASASI - sadece belli basli spawnerlar cikar (her mob degil)
+# ============================
+# NOT: Spawner odulleri komutla verilir (display-only: true), cunku hangi
+# mobun spawner'i oldugunu /give komutundaki block_entity_data component'i
+# belirliyor. Animasyonda gorunen SPAWNER item'i sadece gorseldir.
+
+id: spawner
+name: "&8&lSpawner Kasasi"
+description:
+  - "&7Belli basli spawnerlar kazanma sansi!"
+
+animation: ROULETTE
+
+key-item: SPAWNER
+key-name: "&8&lSpawner Kasasi Anahtari"
+key-lore:
+  - "&7Bu anahtar ile spawner kazanabilirsin"
+
+preview-item: SPAWNER
+broadcast-rare: true
+rare-chance-threshold: 3.0
+
+items:
+  - id: zombie_spawner
+    material: SPAWNER
+    amount: 1
+    name: "&7Zombi Spawner"
+    chance: 40.0
+    display-only: true
+    commands:
+      - 'give %player% minecraft:spawner[minecraft:block_entity_data={id:"minecraft:mob_spawner",SpawnData:{entity:{id:"minecraft:zombie"}}}] 1'
+
+  - id: skeleton_spawner
+    material: SPAWNER
+    amount: 1
+    name: "&fIskelet Spawner"
+    chance: 32.0
+    display-only: true
+    commands:
+      - 'give %player% minecraft:spawner[minecraft:block_entity_data={id:"minecraft:mob_spawner",SpawnData:{entity:{id:"minecraft:skeleton"}}}] 1'
+
+  - id: spider_spawner
+    material: SPAWNER
+    amount: 1
+    name: "&8Orumcek Spawner"
+    chance: 18.0
+    display-only: true
+    commands:
+      - 'give %player% minecraft:spawner[minecraft:block_entity_data={id:"minecraft:mob_spawner",SpawnData:{entity:{id:"minecraft:spider"}}}] 1'
+
+  - id: iron_golem_spawner
+    material: SPAWNER
+    amount: 1
+    name: "&fDemir Golem Spawner"
+    lore:
+      - "&7Nadir bir spawner!"
+    chance: 7.0
+    glow: true
+    display-only: true
+    commands:
+      - 'give %player% minecraft:spawner[minecraft:block_entity_data={id:"minecraft:mob_spawner",SpawnData:{entity:{id:"minecraft:iron_golem"}}}] 1'
+
+  - id: blaze_spawner
+    material: SPAWNER
+    amount: 1
+    name: "&6&lBlaze Spawner"
+    lore:
+      - "&7EN NADIR spawner!"
+    chance: 3.0
+    glow: true
+    display-only: true
+    commands:
+      - 'give %player% minecraft:spawner[minecraft:block_entity_data={id:"minecraft:mob_spawner",SpawnData:{entity:{id:"minecraft:blaze"}}}] 1'
+      - "broadcast &6%player% Spawner Kasasindan Blaze Spawner kazandi!"
